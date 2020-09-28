@@ -1,0 +1,37 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>find_interest.html</title>
+</head>
+<body>
+	<header><h3>Enter principle, rate of interest and time to find simple and compound interest of your choice</h6></header>
+	<form>
+		Principle:    <input type="integer" name="principle" id="principle" placeholder="Enter principle"><br>
+		Time:    <input type="integer" name="time" id="time" placeholder="Enter duration"><br>
+		rate:    <input type="integer" name="principle" id="rate" placeholder="Enter rate of interest"><br>
+		<input type="button" value="Simple interest" onclick="simple_interest()" style="background-color: peachpuff;color: black;"/>
+		<input type="button" value="compound interest" onclick="compound_interest()" style="background-color: peachpuff;color: black;"/>
+	</form>
+	<script type="text/javascript">
+		function simple_interest()
+		{
+			var p=document.getElementById("principle").value;
+			var t=document.getElementById("time").value;
+			var r=document.getElementById("rate").value;
+			var interest=(p*t*r)/100;
+			document.write("total principle including simple interest:"+interest);
+		}
+		function compound_interest()
+		{
+			var p=document.getElementById("principle").value;
+			var t=document.getElementById("time").value;
+			var r=document.getElementById("rate").value;
+			var interest=(p*Math.pow(1+r/100,t));
+			document.write("total principle including compound interest:"+interest);
+
+		}
+	</script>
+
+</body>
+</html>
